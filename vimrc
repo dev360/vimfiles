@@ -191,9 +191,9 @@ endif
 " colorscheme oceanblack
 " colorscheme skittles_dark
 " colorscheme twilight
-" colorscheme mustang
+colorscheme mustang
 " colorscheme clouds_midnight
-colorscheme molokai
+"colorscheme molokai
 
 " GUI "
 if has("gui_running")
@@ -236,3 +236,41 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 " Press F5 to toggle GUndo tree
 nnoremap <F5> :GundoToggle<CR>
+
+" python support
+" --------------
+autocmd filetype python setlocal ft=python.django shiftwidth=4 tabstop=8 softtabstop=4 expandtab colorcolumn=79
+
+" php support
+" -----------
+autocmd FileType php setlocal shiftwidth=4 tabstop=8 softtabstop=4 expandtab
+
+" CSS
+" ---
+autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+
+" Javascript
+" ----------
+autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
+let javascript_enable_domhtmlcss=1
+
+function! s:SelectHTML()
+let n = 1
+while n < 50 && n < line("$")
+  " check for django
+  if getline(n) =~ '{%\s*\(extends\|block\|if\|for\|include\|trans\)\>'
+    set ft=html.htmldjango
+    return
+  endif
+
+  let n = n + 1
+  endwhile
+  " go with html
+  set ft=html
+endfunction
+
+autocmd Bufnewfile,Bufread *.html.erb setlocal ft=eruby.html
+autocmd BufNewFile,BufRead *.py_tmpl setlocal ft=python
+autocmd BufNewFile,BufRead *.html,*.htm  call s:SelectHTML()
+autocmd BufNewFile,BufRead *.less set filetype=css.less
+
