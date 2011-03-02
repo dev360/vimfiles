@@ -82,8 +82,8 @@ In your home directory:
 ##Colorschemes
 *  [af](http://www.vim.org/scripts/script.php?script_id=950)
 *  [Clouds midnight](http://forr.st/~yZn)
-*  [**molokai (default)**](http://www.vim.org/scripts/script.php?script_id=2340)
-*  [mustang](http://hcalves.deviantart.com/art/Mustang-Vim-Colorscheme-98974484)
+*  [molokai](http://www.vim.org/scripts/script.php?script_id=2340)
+*  [**mustang (default)**](http://hcalves.deviantart.com/art/Mustang-Vim-Colorscheme-98974484)
 *  [oceanblack](http://www.vim.org/scripts/script.php?script_id=603)
 *  [skittles_dark](http://www.vim.org/scripts/script.php?script_id=2595)
 *  [twilight](http://www.vim.org/scripts/script.php?script_id=1677)
