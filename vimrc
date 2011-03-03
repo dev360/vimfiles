@@ -272,5 +272,5 @@ endfunction
 autocmd Bufnewfile,Bufread *.html.erb setlocal ft=eruby.html
 autocmd BufNewFile,BufRead *.py_tmpl setlocal ft=python
 autocmd BufNewFile,BufRead *.html,*.htm  call s:SelectHTML()
-autocmd BufNewFile,BufRead *.less set filetype=css.less
-
+autocmd BufNewFile,BufRead *.less set ft=css.less
+autocmd BufNewFile,BufRead *.coffee set ft=coffee
