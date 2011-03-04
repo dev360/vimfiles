@@ -117,7 +117,7 @@ map <Leader>co :TComment<CR>
 
 " Splits  ,v to open a new vertical split and switch to it
 nnoremap <leader>v <C-w>v<C-w>l
-" Move between splits
+
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -146,7 +146,7 @@ set complete=.,t
 set iskeyword-=_
 
 " EXTERNAL COPY / PASTE "
-set pastetoggle=<F2>
+" set pastetoggle=<F2>
 map <C-v> "+gP<CR>
 vmap <C-c> "+y
 
@@ -233,6 +233,11 @@ if exists(":Tab")
 endif
 
 let g:cssColorVimDoNotMessMyUpdatetime = 1
+
+" Mappings
+nnoremap <f1> :BufExplorer<cr>
+nnoremap <f2> :NERDTreeToggle<cr>
+nnoremap <f3> :TlistToggle<cr>
 
 " Press F5 to toggle GUndo tree
 nnoremap <F5> :GundoToggle<CR>
