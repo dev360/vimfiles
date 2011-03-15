@@ -196,7 +196,7 @@ if has("gui_running")
   set guioptions-=l " no scrollbar on the left
   set guioptions-=b " no scrollbar on the bottom
   set guioptions=aiA 
-  set mouse=v
+  set mousemodel=popup
   set guifont=Monaco:h12 "<- Maybe a good idea when using mac
 endif
 set guifont=Monaco:h12
