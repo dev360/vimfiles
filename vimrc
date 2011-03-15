@@ -79,20 +79,13 @@ set wrap
 " set list
 " set listchars=tab:▸\ ,eol:¬
 
-" Move around lines
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
-" inoremap <Esc> <nop>
-
-nnoremap j gj
-nnoremap k gk
+" arrow keys move visible lines
+inoremap <Down> <C-R>=pumvisible() ? "\<lt>Down>" : "\<lt>C-O>gj"<CR>
+inoremap <Up> <C-R>=pumvisible() ? "\<lt>Up>" : "\<lt>C-O>gk"<CR>
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
 
 " Map ESC
 imap jj <ESC>
