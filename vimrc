@@ -66,6 +66,8 @@ set hlsearch
 nnoremap <leader><space> :noh<cr>
 " nnoremap <tab> %
 " vnoremap <tab> %
+vmap <Tab> >gv
+vmap <S-Tab> <gv
 
 :nmap <Space> /
 
@@ -117,8 +119,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Switch between buffers
-noremap <tab> :bn<CR>
-noremap <S-tab> :bp<CR>
+nmap <tab> :bn<CR>
+nmap <S-tab> :bp<CR>
 nmap <leader>d :bd<CR>
 nmap <leader>D :bufdo bd<CR>
 
@@ -155,10 +157,8 @@ let NERDTreeWinPos = "left"
 let NERDTreeHijackNetrw = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeWinSize = 50 
+let NERDTreeIgnore = ['\.pyc$', '\.rbc$', '\~$']
 map <leader>p :NERDTreeToggle<cr>
-
-" PeepOpen
-map <leader>o <Plug>PeepOpen
 
 " TagList
 map <leader>l :TlistToggle <cr>
