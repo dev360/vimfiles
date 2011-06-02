@@ -232,8 +232,10 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 " Mappings
 nnoremap <f1> :BufExplorer<cr>
-nnoremap <f2> :NERDTreeToggle<cr>
-nnoremap <f3> :TlistToggle<cr>
+noremap <F2> :NERDTreeToggle<cr>
+nnoremap <f3> :TagbarToggle<cr>
+
+call togglebg#map("<F6>")
 
 " Press F5 to toggle GUndo tree
 nnoremap <F5> :GundoToggle<CR>
